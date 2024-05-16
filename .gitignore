@@ -1,0 +1,4 @@
+*.class
+build/
+indent.log
+.DS_Store
