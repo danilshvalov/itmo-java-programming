@@ -31,9 +31,9 @@ public class Date {
     public int getDay() { return day; }
 
     public void setDay(int day) {
-        if (day < 1 || monthWith31days.contains(day) && day > 31 ||
-            monthWith30days.contains(day) && day > 30 ||
-            isLeapYear(year) && day > 29 || day > 28) {
+        if (day < 1 || monthWith31days.contains(month) && day > 31 ||
+            monthWith30days.contains(month) && day > 30 ||
+            month == 2 && (isLeapYear(year) && day > 29 || day > 28)) {
             throw new IllegalArgumentException("Invalid day value: " + day +
                                                " for month: " + month);
         }
